@@ -4,11 +4,29 @@
   "description": "api para engel_store",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha --timeout 2000 --exit",
+    "dev": " nodemon server.js",
+    "build": "NODE_ENV=production pm2 start server.js --name=\"ecommerce-api\""
   },
   "author": "Romeu",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.18.2"
+    "body-parser": "^1.20.2",
+    "compression": "^1.7.4",
+    "cores": "^0.8.5",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "express-jwt": "^8.4.1",
+    "express-validation": "^4.1.0",
+    "faker": "^6.6.6",
+    "jsonwebtoken": "^9.0.0",
+    "moment": "^2.29.4",
+    "mongoose": "^7.3.1",
+    "mongoose-paginate": "^5.0.3",
+    "mongoose-pagination": "^1.0.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22"
   }
 }
