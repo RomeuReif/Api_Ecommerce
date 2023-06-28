@@ -66,7 +66,7 @@ UsuarioSchema.methods.gerarToken = function() {
     }, secret);
 };
 
-UsuarioSchema.methods.enviarAuthJson = function() {
+UsuarioSchema.methods.enviarAuthJSON= function() {
     return {
         _id: this._id,
         nome: this.nome,
