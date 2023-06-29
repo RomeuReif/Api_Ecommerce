@@ -7,7 +7,7 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
+                <div class="col-sm-3 col-sm-offset-3">
                     <h2>Recuperar senha</h2>
                     <hr><br>
                     <!-- Parte da validação -->
@@ -31,12 +31,12 @@
                             Digite sua nova senha
                         </p>
     
-                        <form action="api/v1/usuarios/recuperar-senha" method="POST">
+                        <form action="/v1/api/usuarios/recuperar-senha" method="POST">
                             <input type="hidden" name="token" value="<%= token %>">
                             <div class="form-group">
                                 <input class="form-control" type="password" name="password" placeholder="Digite sua nova senha">
                             </div>
-                            <button class="btn btn-primary">Criar nova senha</button>
+                            <button class="btn btn-primary mt-3">Criar nova senha</button>
                         </form>
                     <% } %>
 

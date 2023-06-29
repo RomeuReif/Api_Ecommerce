@@ -7,7 +7,7 @@
     <body>
         <div class="container">
             <div class="row">
-                <div class="col-sm-6 col-sm-offset-3">
+                <div class="col-sm-8 col-sm-offset-3">
                     <h2>Recuperar senha</h2>
                     <hr><br>
                     <!-- Parte da validação -->
@@ -27,11 +27,11 @@
                         Digite seu email para receber as instruções de como reiniciar a sua senha
                     </p>
 
-                    <form action="api/v1/usuarios/recuperar-senha" method="POST">
+                    <form action="/v1/api/usuarios/recuperar-senha" method="POST">
                         <div class="form-group">
                             <input class="form-control" type="email" name="email" placeholder="Digite seu e-mail ex:teste@gmail.com">
                         </div>
-                        <button class="btn btn-primary">Recuperar senha</button>
+                        <button class="btn btn-primary mt-3">Recuperar senha</button>
                     </form>
 
                 </div>

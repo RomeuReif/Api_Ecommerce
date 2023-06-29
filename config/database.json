@@ -1,4 +1,4 @@
 {
-    "dbTest": "mongodb://localhost:27017/ecommerce-api-teste",
-    "dbProduction": "mongodb://localhost:27017/ecommerce-api"
+    "dbTest": "mongodb://127.0.0.1:27017/ecommerce-api-teste",
+    "dbProduction": "mongodb://127.0.0.1:27017/ecommerce-api"
 }
