@@ -15,11 +15,13 @@ class UsuarioController {
 
     // Get /:id pega usuario que não é vc
     show(req, res, next) {
-        Usuario.findById(req.params.id).populate({ path: "loja" })
+        Usuario.findById(req.params.id)
+        // .populate({ path: "loja" })
         .then(usuario => {
             if(!usuario) return res.status(401).json({ errors: "Usuario não registrado " });
             return res.json({ 
                 usuario: {
+                    _id: usuario._id,
                     nome: usuario.nome,
                     email: usuario.email,
                     permisssao: usuario.permissao,
@@ -31,11 +33,11 @@ class UsuarioController {
 
     // Post /registrar salvar usuario
     store(req, res, next) {
-        const { nome, email, password } = req.body;
+        const { nome, email, password, loja } = req.body;
 
-        if(!nome || !email || !password) return res.status(422).json({ errors: "Preencha todos os campos de cadastro"});
+        if(!nome || !email || !password || !loja) return res.status(422).json({ errors: "Preencha todos os campos de cadastro"});
 
-        const usuario = new Usuario({ nome, email });
+        const usuario = new Usuario({ nome, email, loja });
         usuario.setSenha(password);
 
         usuario.save()
